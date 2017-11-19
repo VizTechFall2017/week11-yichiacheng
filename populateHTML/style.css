@@ -1,0 +1,23 @@
+.svgBox {
+    height: 100vh;
+}
+
+.sidebar{
+    background:red;
+    height:100vh;
+}
+
+.titleRow{
+    font-size: 18pt;
+    font-weight:bold;
+    height:75px;
+}
+
+.label{
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.entry{
+    font-size: 14pt;
+}

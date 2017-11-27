@@ -20,14 +20,14 @@ d3.csv('./foodImports_AE.csv', function(dataIn){
 });
 
 function buttonClicked(value){
-    reloadData(value);
+    reloadData(value);//按某個鍵後，才開始匯入資料
 }
 
 
 function reloadData(inputName){
 
         d3.csv('foodImports_' + inputName + '.csv', function(error, newData){
-            console.log(newData);
+            console.log(newData);//選擇要匯入的csv檔，
 
             //call your update function from here!!
             //updateData(newData);

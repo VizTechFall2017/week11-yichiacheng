@@ -81,7 +81,7 @@ d3.csv('./banks.csv', function(banks){
         .attr("r", function(d) { return radiusScale(d.assets); })
         .style("fill", function(d) { return colorScale(d.cluster); })
         .on('mouseover',function(d){
-            document.getElementById('title').innerHTML = (d.bank);
+            document.getElementById('title').innerHTML = (d.bank);//各自找csv裡的值
             document.getElementById('rank').innerHTML = (d.rank);
             document.getElementById('assets').innerHTML = (d.assets);
             document.getElementById('country').innerHTML = (d.country);

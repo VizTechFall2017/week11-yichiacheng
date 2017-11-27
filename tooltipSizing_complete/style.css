@@ -18,8 +18,10 @@
     pointer-events: all;
 }
 
-.tooltip-inner{
+.tooltip-inner{ /*調整標籤大小*/
     min-width: 100px;
     max-width: 100%;
     height: 50px;
 }
+
+

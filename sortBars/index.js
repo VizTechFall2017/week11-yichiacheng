@@ -14,6 +14,8 @@ var svg = d3.select('svg')
 var scaleX = d3.scaleBand().rangeRound([0, 600]).padding(0.1);
 var scaleY = d3.scaleLinear().range([400, 0]);
 
+var sortOrder ='decreasing';
+var currentYear= 1987;
 
 //import the data from the .csv file
 d3.csv('./countryData_topten.csv', function(dataIn){
@@ -120,20 +122,38 @@ function drawPoints(pointData){
     //rects.exit()
     //    .remove();
 
-
-
 }
 
 
 function updateData(selectedYear){
-    return nestedData.filter(function(d){return d.key == selectedYear})[0].values;
-}
 
+    console.log(selectedYear);
+
+    if(sortOrder == 'alphabetical'){
+
+        return nestedData.filter(function(d){return d.key == selectedYear})[0].values.sort(function(a,b){  //要比較兩個東西，所以分a,b
+            return a.fullname.localeCompare(b.fullname);//a代表照字母排
+        });
+
+    }
+    else {
+        return nestedData.filter(function(d){return d.key == selectedYear})[0].values.sort(function(a,b){
+            return b.totalPop-a.totalPop; //b代表照值排，從大到小b-a;從小到大a-b
+        });
+    }
+}
 
 //this function runs when the HTML slider is moved
 function sliderMoved(value){
 
     newData = updateData(value);
     drawPoints(newData);
+    currentYear=value
+
+}
+function radioChange(value) {
+    sortOrder= value;
+    newData=updateData(currentYear)
+    drawPoints(newData)
 
 }

@@ -1,0 +1,53 @@
+.svgBox {
+    height: 75vh;
+}
+
+.sidebar{
+    background:darkslategrey;
+    height:30vh;
+}
+
+.titleRow{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+    font-weight:bold;
+    height:60px;
+    color: white;
+}
+
+.label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
+    color: white;
+}
+
+.entry{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
+    color: white;
+}
+
+div.tooltip {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+    height: 30px;
+    padding: 5px;
+    color: white;
+    background: slategray;
+    border: 1px;
+    border-radius: 8;
+    pointer-events: none;
+}
+
+.header {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 14pt;
+    width:80vw;
+    padding: 20px;
+    text-align: left;
+}

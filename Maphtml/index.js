@@ -78,17 +78,18 @@ queue()
 
 
 
-            .on('mouseover',function(mapdata){
-                    document.getElementById('title').innerHTML = (d.neighborhoods);//各自找csv裡的值
+            .on('mouseover',function(d){
+                    document.getElementById('title').innerHTML = (d.neighborhoods);
                     document.getElementById('crimerate').innerHTML = (d.crimerate);
                     document.getElementById('density').innerHTML = (d.density);
-                    //document.getElementById('tstation').innerHTML = (d.country);
+                    document.getElementById('tstation').innerHTML = (d.tstation);
             });
 
 
 
 
         Arraylist1=[
+            //green line
             {long:-71.0622954369, lat:42.3561971861, Name: "ParkStreet"},
             {long:-71.0648703575, lat:42.3523914894},
             {long:-71.070498, lat:42.351868},
@@ -103,7 +104,6 @@ queue()
             {long:-71.058996, lat:42.362498},
             {long:-71.061423, lat:42.365512},
             {long:-71.0681641102, lat:42.3666775177},
-            //{long:-71.076884, lat:42.370582},
             {long:-71.095296, lat:42.348797},
             {long:-71.1043953896, lat:42.3452869056},
             {long:-71.100796, lat:42.349297},
@@ -125,8 +125,7 @@ queue()
             {long:-71.1661934853, lat:42.3399420801},
             {long:-71.1533403397, lat:42.338086352},
 
-
-
+            //orange line
             {long:-71.060788, lat:42.355295},
             {long:-71.062892, lat:42.352228},
             {long:-71.063795, lat:42.349873},
@@ -139,6 +138,7 @@ queue()
             {long:-71.107313633, lat:42.3105691548},
             {long:-71.113411, lat:42.300362},
 
+            //red line
             {long:-71.0549998283, lat:42.351709611},
             {long:-71.05713, lat:42.3429},
             {long:-71.05696, lat:42.32955},
@@ -150,8 +150,7 @@ queue()
             {long:-71.0597419739, lat:42.278420118},
             {long:-71.0720801353, lat:42.3612710899},
 
-            //{long:-71.0760390759, lat:42.351709611},
-
+            //blue line
             {long:-71.062129, lat: 42.361457},
             {long:-71.05357, lat:42.359456},
             {long:-71.039926, lat:42.36886},

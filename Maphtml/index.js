@@ -78,7 +78,7 @@ queue()
 
 
 
-            .on('mouseover',function(d){
+            .on('mouseover',function(mapdata){
                     document.getElementById('title').innerHTML = (d.neighborhoods);//各自找csv裡的值
                     document.getElementById('crimerate').innerHTML = (d.crimerate);
                     document.getElementById('density').innerHTML = (d.density);

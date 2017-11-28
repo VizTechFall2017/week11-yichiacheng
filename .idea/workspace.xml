@@ -17,8 +17,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Maphtml/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            <state relative-caret-position="287">
+              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -27,8 +27,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project02/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2087">
-              <caret line="157" column="2" lean-forward="false" selection-start-line="157" selection-start-column="2" selection-end-line="157" selection-end-column="2" />
+            <state relative-caret-position="-1029">
+              <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -37,18 +37,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project02/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="281" column="59" lean-forward="true" selection-start-line="281" selection-start-column="59" selection-end-line="281" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Maphtml/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="1" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="28" selection-end-column="1" />
+            <state relative-caret-position="213">
+              <caret line="241" column="132" lean-forward="false" selection-start-line="241" selection-start-column="132" selection-end-line="241" selection-end-column="132" />
               <folding />
             </state>
           </provider>
@@ -60,6 +50,7 @@
     <findStrings>
       <find>tai</find>
       <find>svg</find>
+      <find>con</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,8 +70,9 @@
         <option value="$PROJECT_DIR$/Project/index.js" />
         <option value="$PROJECT_DIR$/Project01/index.js" />
         <option value="$PROJECT_DIR$/Maphtml/index.html" />
-        <option value="$PROJECT_DIR$/Project02/index.html" />
+        <option value="$PROJECT_DIR$/Maphtml/index.js" />
         <option value="$PROJECT_DIR$/Project02/index.js" />
+        <option value="$PROJECT_DIR$/Project02/index.html" />
       </list>
     </option>
   </component>
@@ -165,12 +157,12 @@
       <option name="presentableId" value="Default" />
       <updated>1511305650876</updated>
       <workItem from="1511305652255" duration="6392000" />
-      <workItem from="1511790750144" duration="4275000" />
+      <workItem from="1511790750144" duration="5321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10667000" />
+    <option name="totallyTimeSpent" value="11713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -413,24 +405,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Maphtml/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        <state relative-caret-position="287">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project02/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2087">
-          <caret line="157" column="2" lean-forward="false" selection-start-line="157" selection-start-column="2" selection-end-line="157" selection-end-column="2" />
+        <state relative-caret-position="-1029">
+          <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project02/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="281" column="59" lean-forward="true" selection-start-line="281" selection-start-column="59" selection-end-line="281" selection-end-column="59" />
+        <state relative-caret-position="213">
+          <caret line="241" column="132" lean-forward="false" selection-start-line="241" selection-start-column="132" selection-end-line="241" selection-end-column="132" />
           <folding />
         </state>
       </provider>

@@ -1,4 +1,4 @@
-var svg1 = d3.select("#svg1"),
+var svg= d3.select("body").append("svg1")
 
     margin = {top: 10, right: 20, bottom: 80, left: 100},
     width = +svg1.attr("width") - margin.left - margin.right,
@@ -155,10 +155,10 @@ function change(value){
 //var width = document.getElementById('svg2').clientWidth;
 //var height = document.getElementById('svg2').clientHeight;
 
-/*var marginLeft = 10;
+var marginLeft = 10;
 var marginTop = 10;
 
-var svg2 = d3.select('#svg2')
+var svg2 = d3.select("body").append("svg")
     .append('g')
     .attr('transform', 'translate(' + marginLeft + ',' + marginTop + ')');
 

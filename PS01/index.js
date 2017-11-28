@@ -1,15 +1,15 @@
-var svg = d3.select('#svg1')
+var svg = d3.select("#svg1"),
 
     margin = {top: 10, right: 20, bottom: 80, left: 100},
-    width = +svg1.attr("width") - margin.left - margin.right,
-    height = +svg1.attr("height") - margin.top - margin.bottom;
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom;
 
 var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
     y = d3.scaleLinear().rangeRound([height, 0]);
 
 var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
-var g = svg1.append("g")
+var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 var nestedData = [];
 
@@ -80,7 +80,7 @@ function drawPoints(pointData){console.log(pointData);
         .call(d3.axisLeft(y));
 
 
-    var rects = svg1.selectAll('.bar')
+    var rects = svg.selectAll('.bar')
     //.data(pointData, function(d){return d.neigborhood;});
         .data(pointData);
 
@@ -155,54 +155,37 @@ function change(value){
 //var width = document.getElementById('svg2').clientWidth;
 //var height = document.getElementById('svg2').clientHeight;
 
-var marginLeft = 10;
+/*var marginLeft = 10;
 var marginTop = 10;
-
 var svg2 = d3.select('#svg2')
     .append('g')
     .attr('transform', 'translate(' + marginLeft + ',' + marginTop + ')');
-
 //set up the projection for the map
 var albersProjection = d3.geoAlbers()  //tell it which projection to use
     .scale(190000)//tell it how big the map should be
     .rotate([71.057, 0])
     .center([0, 42.313])
     .translate([(width/2), (height/2)]);  //set the center of the map to show up in the center of the screen
-
 //set up the path generator function to draw the map outlines
 path = d3.geoPath()
     .projection(albersProjection);        //tell it to use the projection that we just made to convert lat/long to pixels
-
 var div = d3.select("body")
     .append("div")
     .attr("class", "tooltip")
     .style("opacity", 0.8);
-
 var colorScale = d3.scaleLinear().range(['white','Gainsboro']);
 var districtLookup = d3.map(); //check library(lookup table) to get information>connection name and value
 //var colorScale = d3.scaleLinear()
 //  .domain([10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000])
 //.range(['#ffffe0','#ffdfa9','#ffbd84','#ff976d','#f47461','#e25056','#cb2f44','#ae112a','#8b0000']);
-
-
-
-
-
 queue()
     .defer(d3.json, "./Boston_Neighborhoods.json")
     .defer(d3.csv, "./neighborhoodsdata.csv")
     .await(function(err, mapData, densityData){
-
-
         densityData.forEach(function(d){
             districtLookup.set(d.name, d.density);//set: what this library's entry should be
         });
-
-
         colorScale.domain([0, d3.max(densityData.map(function(d){return +d.density}))]);//set color scale to match pop data and reflect on map
-
-
-
         svg2.selectAll("path")               //make empty selection
             .data(mapData.features)          //bind to the features array in the map data
             .enter()
@@ -215,7 +198,6 @@ queue()
             .attr('stroke','white')
             .attr('stroke-width',1)
             .on("mouseover", function(d) {
-
                 div.transition()
                     .duration(200)
                     .style("opacity", .9);
@@ -223,14 +205,12 @@ queue()
                     .style("left", (d3.event.pageX) + "px")
                     .style("top", (d3.event.pageY - 28) + "px");
             })
-
             // fade out tooltip on mouse out
             .on("mouseout", function(d) {
                 div.transition()
                     .duration(500)
                     .style("opacity", 0);
             });
-
         Arraylist1=[
             {long:-71.0622954369, lat:42.3561971861, Name: "ParkStreet"},
             {long:-71.0648703575, lat:42.3523914894},
@@ -267,9 +247,6 @@ queue()
             {long:-71.1577820778, lat:42.3395772832},
             {long:-71.1661934853, lat:42.3399420801},
             {long:-71.1533403397, lat:42.338086352},
-
-
-
             {long:-71.060788, lat:42.355295},
             {long:-71.062892, lat:42.352228},
             {long:-71.063795, lat:42.349873},
@@ -281,7 +258,6 @@ queue()
             {long:-71.1028289795, lat:42.3192008078},
             {long:-71.107313633, lat:42.3105691548},
             {long:-71.113411, lat:42.300362},
-
             {long:-71.0549998283, lat:42.351709611},
             {long:-71.05713, lat:42.3429},
             {long:-71.05696, lat:42.32955},
@@ -292,9 +268,7 @@ queue()
             {long:-71.064219, lat:42.285924},
             {long:-71.0597419739, lat:42.278420118},
             {long:-71.0720801353, lat:42.3612710899},
-
             //{long:-71.0760390759, lat:42.351709611},
-
             {long:-71.062129, lat: 42.361457},
             {long:-71.05357, lat:42.359456},
             {long:-71.039926, lat:42.36886},
@@ -302,10 +276,6 @@ queue()
             {long:-71.023394, lat:42.380797},
             {long:-71.006628, lat:42.386676},
             {long:-71.0003578663, lat:42.3884015915}
-
-
-
-
         ];
         svg2.selectAll('circle')
             .data(Arraylist1)       //bind a single data point, with the long lat of Boston
@@ -321,23 +291,13 @@ queue()
             .attr('r', 3)
             .attr('fill','black')
             .on('mouseover', function(d){
-
                 d3.select("h2").text(d.Name );
                 d3.select(this).attr("class","incident hover");
                 d3.select(this).attr("fill","lightsalmon");
-
-
-
             })
             .on("mouseout", function(d){
                 d3.select(this).attr("fill",'black');})
-
-
-
     });
-
-
-
 /* svg.select('circle02')
      .data([{long: -71.060788, lat:42.355295}])
      .
@@ -353,7 +313,6 @@ queue()
      })
      .attr('r', 3)
      .attr('fill','orange')*/
-
 
 
 
